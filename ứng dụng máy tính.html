@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="text" id="b">
+<br> <br>
+<button onclick="Addition()">Addition(+)</button>
+<button onclick="Subtraction()">Subtraction(-)</button>
+<button onclick="Multiplication()">Multiplication(X)</button>
+<button onclick="Division()">Division(/)</button>
+<div id="Result"></div>
+</body>
+<script>
+    function Addition(){
+    let a =+ document.getElementById('a').value;
+    let b =+ document.getElementById('b').value;
+    let ketqua1 =+ a + b
+    document.getElementById('Result').innerText='Result:' + ketqua1;}
+</script>
+<script>
+    function Subtraction(){
+        let a =+ document.getElementById('a').value;
+        let b =+ document.getElementById('b').value;
+        let ketqua2 =+ a - b
+        document.getElementById('Result').innerText='Result:' + ketqua2;}
+</script>
+
+<script>
+    function Multiplication(){
+        let a =+ document.getElementById('a').value;
+        let b =+ document.getElementById('b').value;
+        let ketqua3 =+ a * b
+        document.getElementById('Result').innerText='Result:' + ketqua3;}
+</script>
+<script>
+    function Division(){
+        let a =+ document.getElementById('a').value;
+        let b =+ document.getElementById('b').value;
+        let ketqua4 =+ a / b
+        document.getElementById('Result').innerText='Result:' + ketqua4;}
+</script>
+
+</html>

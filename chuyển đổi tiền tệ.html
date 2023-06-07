@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển dổi tiền tệ</title>
+  <style>
+    td{
+      text-align: center
+    }
+  </style>
+</head>
+
+<body>
+  <table width="600">
+    <tr>
+      <th>Amount</th>
+      <th>From Curency</th>
+      <th>To Currency</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input type="text" id="Amount"></td>
+      <td>
+        <select name="vn" id="a">
+          <option>Việt Nam</option>
+          <option>Đông Lào</option>
+        </select>
+      </td>
+      <td>
+        <select name="dl" id="b">
+          <option>Đông Lào</option>
+          <option>Việt Nam</option>
+        </select>
+      </td>
+      <td>
+        <button style="background-color: blue; color: white" onclick="chuyentien()">Convert</button>
+      </td>
+    </tr>
+  </table>
+
+<div id="Result"></div>
+</body>
+<script >
+  function chuyentien(){
+    let vn = document.getElementById("a").value;
+    let dl = document.getElementById("b").value;
+    let dt = document.getElementById("Amount").value;
+
+    if(vn=="Việt Nam" && dl=="Đông Lào")
+    {dt=dt*2;}
+    else if(vn=="Đông Lào" && dl=="Việt Nam")
+    {dt=dt/2;}
+    document.getElementById('Result').innerText='Result:' + dt;}
+</script>
+</html>
